@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<math.h>
 float add()
 {
     float a,b;
@@ -28,12 +28,18 @@ printf("enter two numbers to be divided\n");
     scanf("%f %f", &a,&b);
     printf("the result is %.2f", a/b);
 }
-
+float p()
+{
+ float a,b;
+    printf("enter a number and its power\n");
+    scanf("%f %f", &a,&b);
+    printf("the result is %.2f", pow(a,b));
+}
 int main ()
 {
     int count;
     printf("this is a calculator program for 2 numbers\n");
-    printf("Choose 1 for addition\n choose 2 for subtraction\n choose 3 for multiplication \n choose 4 for division\n");
+    printf("Choose 1 for addition\n choose 2 for subtraction\n choose 3 for multiplication \n choose 4 for division\n choose 5 for power function\n");
     scanf("%d",&count);
     if(count==1)
     {
@@ -50,6 +56,10 @@ int main ()
     else if(count==4)
     {
         div();
+    }
+    else if(count==5)
+    {
+        p();
     }
 else
 {
